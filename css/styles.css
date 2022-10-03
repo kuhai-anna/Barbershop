@@ -1,0 +1,157 @@
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+.link {
+	text-decoration: none;
+}
+
+.list {
+	list-style: none;
+}
+
+/* --------------HEADER------------- */
+.header {
+	background-color: #616161;
+}
+
+.header-link,
+.header-tel {
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.1em;
+
+	color: #ffffff;
+}
+
+.header-link:hover,
+.header-link:focus,
+.header-tel:hover,
+.header-tel:focus,
+.current {
+	color: #ff6c00;
+}
+
+.header-btn {
+	font-family: inherit;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+
+	color: #ffffff;
+
+	background-color: transparent;
+	border-color: #ff6c00;
+}
+
+.header-btn:hover,
+.header-btn:focus {
+	background-color: #ff6c00;
+}
+
+/* ---------------MAIN-------------- */
+/* ---------------HERO-------------- */
+.hero {
+	background-color: #616161;
+}
+
+.hero-link {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	letter-spacing: 0.2em;
+
+	color: #303030;
+}
+
+.hero-link:hover,
+.hero-link:focus {
+	color: #ff6c00;
+}
+
+.hero-pre-title {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	text-transform: uppercase;
+
+	color: rgba(157, 164, 189, 0.6);
+}
+.hero-title {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 72px;
+	line-height: 1ю18;
+	letter-spacing: 0.05em;
+
+	color: #ffffff;
+}
+
+.hero-after-title {
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0.02em;
+
+	color: #9da4bd;
+}
+
+/* --------------ABOUT-------------- */
+.about-pre-title {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	text-transform: uppercase;
+
+	color: #303030;
+}
+.about-title {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 1.17;
+	letter-spacing: 0.05em;
+
+	color: #303030;
+}
+.about-after-title {
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0.02em;
+
+	color: #555555;
+}
+
+.about-text {
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0.02em;
+
+	color: #555555;
+}
+.about-btn {
+	font-family: inherit;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+
+	color: #303030;
+
+	background-color: transparent;
+	border-color: #ff6c00;
+}
+
+.about-btn:hover,
+.about-btn:focus {
+	color: #ffffff;
+
+	background-color: #ff6c00;
+}
+
+/* --------------PRICES------------- */
+
+/* --------------FOOTER------------- */
