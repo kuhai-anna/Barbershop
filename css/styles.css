@@ -45,6 +45,7 @@ body {
 
 	background-color: transparent;
 	border-color: #ff6c00;
+	cursor: pointer;
 }
 
 .header-btn:hover,
@@ -143,6 +144,7 @@ body {
 
 	background-color: transparent;
 	border-color: #ff6c00;
+	cursor: pointer;
 }
 
 .about-btn:hover,
@@ -153,5 +155,274 @@ body {
 }
 
 /* --------------PRICES------------- */
+.prices {
+	background-color: #616161;
+}
+.prices-pre-title {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	text-transform: uppercase;
 
+	color: rgba(157, 164, 189, 0.6);
+}
+
+.prices-title {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 1.17;
+	letter-spacing: 0.05em;
+
+	color: #ffffff;
+}
+
+.prices-list-text {
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0.02em;
+
+	color: #9da4bd;
+}
+
+.prices-btn {
+	font-family: inherit;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+
+	color: #ffffff;
+
+	background-color: transparent;
+	border-color: #ff6c00;
+	cursor: pointer;
+}
+
+.prices-btn:hover,
+.prices-btn:focus {
+	background-color: #ff6c00;
+	border-color: #ff6c00;
+}
+/* -------------BENEFITS------------ */
+
+.benefits-item span {
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 1.36;
+	text-align: center;
+	letter-spacing: 0.05em;
+
+	color: #303030;
+}
+.benefits-item-text {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	text-align: center;
+
+	color: #303030;
+}
+.benefits-pre-title {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	text-transform: uppercase;
+
+	color: #303030;
+}
+.benefits-title {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 49px;
+	letter-spacing: 0.05em;
+
+	color: #303030;
+}
+.benefits-after-title {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0.02em;
+
+	color: #555555;
+}
+
+/* -------------BARBERS------------- */
+.barbers {
+	background-color: #f7f7f7;
+}
+
+.barbers-pre-title {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	text-transform: uppercase;
+
+	color: #303030;
+}
+
+.barbers-title {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 1.67;
+	letter-spacing: 0.05em;
+
+	color: #303030;
+}
+
+.barbers-name {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.39;
+	text-align: center;
+	letter-spacing: 0.02em;
+
+	color: #303030;
+}
+
+.barbers-description {
+	font-size: 14px;
+	line-height: 1.36;
+	letter-spacing: 0.02em;
+
+	color: #ff6c00;
+}
+
+.media-link:hover,
+.media-link:focus {
+	color: #ff6c00;
+}
+/* --------------WORKS-------------- */
+
+.works-pre-title {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	text-transform: uppercase;
+
+	color: #303030;
+}
+
+.visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}
+/* -------------BOOKING------------- */
+.booking {
+	background-color: #191c26;
+}
+.booking-title {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 1.17;
+	letter-spacing: 0.05em;
+
+	color: #ffffff;
+}
+/* -------------CONTACTS------------ */
+.contacts {
+	background-color: #191c26;
+}
+
+.contacts-title {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 1.17;
+	letter-spacing: 0.05em;
+
+	color: #ffffff;
+}
+
+.address {
+	font-style: normal;
+}
+
+.contacts-map-link {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0.02em;
+
+	color: #9da4bd;
+}
+
+.contacts-tel {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0.02em;
+
+	color: #9da4bd;
+}
+
+.contacts-email {
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0.02em;
+	text-decoration-line: underline;
+
+	color: #9da4bd;
+}
+
+.contacts-map-link:hover,
+.contacts-map-link:focus,
+.contacts-tel:hover,
+.contacts-tel:focus,
+.contacts-email:hover,
+.contacts-email:focus {
+	color: #ffffff;
+}
+
+.contacts-subtitle {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.67;
+	text-transform: uppercase;
+
+	color: #ffffff;
+}
+
+.contacts-scedule {
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0.02em;
+
+	color: #9da4bd;
+}
 /* --------------FOOTER------------- */
+.copyright {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.67;
+	letter-spacing: 0.2em;
+
+	color: #9da4bd;
+}
+
+.footer-link {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.67;
+	letter-spacing: 0.2em;
+
+	color: #303030;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+	color: #ff6c00;
+}
