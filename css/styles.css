@@ -10,6 +10,24 @@
 	--additional-background-color: #191c26;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+address {
+	font-style: normal;
+}
+
+img {
+	display: block;
+}
+
 body {
 	font-family: "Open Sans", sans-serif;
 	font-size: 18px;
@@ -20,7 +38,31 @@ body {
 	background-color: var(--primary-background-color);
 }
 
+.link {
+	text-decoration: none;
+}
+
+.list {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.container {
+	width: 1200px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin: 0 auto;
+
+	outline: 2px solid red;
+}
+
 .btn {
+	border-color: var(--accent-color);
+	cursor: pointer;
+
+	background-color: transparent;
+
 	font-family: inherit;
 	font-weight: 600;
 	font-size: 12px;
@@ -29,18 +71,65 @@ body {
 	text-transform: uppercase;
 }
 
-.link {
-	text-decoration: none;
+.section {
+	padding-top: 120px;
+	padding-bottom: 120px;
 }
 
-.list {
-	list-style: none;
+.pre-title {
+	margin-bottom: 20px;
+
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	text-transform: uppercase;
+}
+
+.section-title {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 1.17;
+	letter-spacing: 0.05em;
+}
+
+.visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
 }
 
 /* --------------HEADER------------- */
 .header {
+	padding-top: 32px;
+	padding-bottom: 32px;
 	background-color: #616161;
 }
+
+/* .header-container {
+	display: flex;
+	align-items: center;
+} */
+
+/* .header-navigation {
+	display: flex;
+} */
+
+/* .header-logo {
+	margin-right: 131px;
+} */
+
+/* .header-list {
+	display: flex;
+	align-items: center;
+} */
 
 .header-link,
 .header-tel {
@@ -65,10 +154,6 @@ body {
 
 .header-btn {
 	color: var(--light-text-color);
-
-	background-color: transparent;
-	border-color: var(--accent-color);
-	cursor: pointer;
 }
 
 .header-btn:hover,
@@ -77,21 +162,6 @@ body {
 }
 
 /* ---------------MAIN-------------- */
-.pre-title {
-	font-weight: 600;
-	font-size: 11px;
-	line-height: 1.36;
-	text-transform: uppercase;
-}
-
-.section-title {
-	font-family: "Raleway", sans-serif;
-	font-weight: 700;
-	font-size: 42px;
-	line-height: 1.17;
-	letter-spacing: 0.05em;
-}
-
 /* ---------------HERO-------------- */
 .hero {
 	background-color: #616161;
@@ -116,7 +186,6 @@ body {
 
 .hero-title {
 	font-family: "Raleway", sans-serif;
-	font-weight: 700;
 	font-size: 72px;
 	line-height: 1.18;
 	letter-spacing: 0.05em;
@@ -134,17 +203,19 @@ body {
 	color: var(--secondary-text-color);
 }
 
+.about-title {
+	margin-bottom: 20px;
+}
+
 .about-text {
+	margin-bottom: 42px;
+
 	font-size: 14px;
 	line-height: 1.86;
 }
 
 .about-btn {
 	color: var(--secondary-text-color);
-
-	background-color: transparent;
-	border-color: var(--accent-color);
-	cursor: pointer;
 }
 
 .about-btn:hover,
@@ -158,12 +229,28 @@ body {
 .prices {
 	background-color: #616161;
 }
+
 .prices-pre-title {
 	color: var(--translucent-text-color);
 }
 
 .prices-title {
+	margin-bottom: 44px;
+
 	color: var(--light-text-color);
+}
+
+.prices-list {
+	padding-top: 30px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+	padding-left: 20px;
+
+	outline: 2px solid blue;
+}
+
+.prices-item:not(:last-child) {
+	margin-bottom: 20px;
 }
 
 .prices-list-text {
@@ -171,11 +258,11 @@ body {
 }
 
 .prices-btn {
-	color: var(--light-text-color);
+	display: block;
+	margin: 0 auto;
+	margin-top: 44px;
 
-	background-color: transparent;
-	border-color: var(--accent-color);
-	cursor: pointer;
+	color: var(--light-text-color);
 }
 
 .prices-btn:hover,
@@ -184,7 +271,18 @@ body {
 }
 
 /* -------------BENEFITS------------ */
+.benefits-item {
+	width: 170px;
+	height: 133px;
+	padding: 20px 24px;
+
+	outline: 1px solid red;
+}
+
 .benefits-item span {
+	display: block;
+	margin-bottom: 6px;
+
 	font-weight: 700;
 	font-size: 42px;
 	line-height: 1.36;
@@ -208,6 +306,10 @@ body {
 	color: var(--secondary-text-color);
 }
 
+.benefits-title {
+	margin-bottom: 20px;
+}
+
 /* -------------BARBERS------------- */
 .barbers {
 	background-color: var(--secondary-background-color);
@@ -218,7 +320,23 @@ body {
 	color: var(--secondary-text-color);
 }
 
+.barbers-title {
+	margin-bottom: 44px;
+}
+
+/* .barbers-list {
+	display: flex;
+	gap: 30px;
+	(або через calc)
+} */
+
+.barbers-wrap {
+	padding-top: 30px;
+}
+
 .barbers-name {
+	margin-bottom: 8px;
+
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 1.39;
@@ -228,8 +346,11 @@ body {
 }
 
 .barbers-description {
+	margin-bottom: 30px;
+
 	font-size: 14px;
 	line-height: 1.36;
+	text-align: center;
 
 	color: var(--accent-color);
 }
@@ -239,28 +360,23 @@ body {
 	color: var(--accent-color);
 }
 
+/* .media-list {
+	display: flex;
+	justify-content: center;
+} */
+
 /* --------------WORKS-------------- */
 .works-pre-title {
-	color: var(--secondary-text-color);
-}
+	margin-bottom: 44px;
 
-.visually-hidden {
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	border: 0;
-	padding: 0;
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	margin: -1px;
+	color: var(--secondary-text-color);
 }
 
 /* -------------BOOKING------------- */
 .booking {
 	background-color: var(--additional-background-color);
 }
+
 .booking-title {
 	color: var(--light-text-color);
 }
@@ -271,17 +387,26 @@ body {
 }
 
 .contacts-title {
+	margin-bottom: 40px;
+
 	color: var(--light-text-color);
 }
 
 .address {
-	font-style: normal;
+	margin-bottom: 70px;
 }
 
 .contacts-map-link {
+	display: inline-block;
+	margin-bottom: 20px;
+
 	font-weight: 700;
 
 	color: var(--additional-text-color);
+}
+
+.contacts-item + .contacts-item {
+	margin-top: 20px;
 }
 
 .contacts-tel {
@@ -304,6 +429,8 @@ body {
 }
 
 .contacts-subtitle {
+	margin-bottom: 20px;
+
 	font-weight: 600;
 	font-size: 11px;
 	line-height: 1.36;
@@ -317,6 +444,11 @@ body {
 }
 
 /* --------------FOOTER------------- */
+.footer {
+	padding-top: 56px;
+	padding-bottom: 56px;
+}
+
 .copyright,
 .footer-link {
 	font-weight: 600;
