@@ -203,7 +203,12 @@ body {
 	padding-right: 100px;
 	padding-bottom: 208px;
 	padding-left: 100px;
-	background-color: #616161;
+	/* background-color: #616161; */
+	background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+		url(../img/slide-1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .hero-pre-title {
@@ -269,7 +274,10 @@ body {
 
 /* --------------PRICES------------- */
 .prices-section {
-	background-color: #616161;
+	/* background-image: linear-gradient(#111319, #111319), url(../img/prices-background.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; */
 }
 
 .prices-pre-title {
