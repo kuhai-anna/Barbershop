@@ -80,12 +80,21 @@ body {
 }
 
 .pre-title {
+	display: flex;
+	align-items: center;
 	margin-bottom: 20px;
 
 	font-weight: 600;
 	font-size: 11px;
 	line-height: 1.36;
 	text-transform: uppercase;
+}
+
+.pre-title::before {
+	content: "";
+	width: 60px;
+	height: 1px;
+	margin-right: 20px;
 }
 
 .section-title {
@@ -127,7 +136,9 @@ body {
 }
 
 .header-logo {
+	display: flex;
 	margin-right: 131px;
+	color: var(--secondary-text-color);
 }
 
 .header-list {
@@ -184,6 +195,15 @@ body {
 	width: 100px;
 }
 
+.hero-list::before {
+	content: "";
+	display: inline-block;
+	width: 60px;
+	height: 1px;
+	margin-right: 20px;
+	background-color: var(--secondary-text-color);
+}
+
 .hero-link {
 	font-weight: 600;
 	font-size: 11px;
@@ -213,6 +233,10 @@ body {
 
 .hero-pre-title {
 	color: var(--translucent-text-color);
+}
+
+.hero-pre-title::before {
+	background-color: var(--translucent-text-color);
 }
 
 .hero-title {
@@ -250,6 +274,10 @@ body {
 	color: var(--secondary-text-color);
 }
 
+.about-pre-title::before {
+	background-color: var(--secondary-text-color);
+}
+
 .about-title {
 	margin-bottom: 20px;
 }
@@ -284,6 +312,10 @@ body {
 	color: var(--translucent-text-color);
 }
 
+.prices-pre-title::before {
+	background-color: var(--translucent-text-color);
+}
+
 .prices-title {
 	margin-bottom: 44px;
 
@@ -314,7 +346,8 @@ body {
 	margin-bottom: 20px;
 }
 
-.prices-list-text {
+.service,
+.price {
 	color: var(--additional-text-color);
 }
 
@@ -332,14 +365,19 @@ body {
 }
 
 /* -------------BENEFITS------------ */
-/* Не готовий */
 .benefits-container {
 	display: flex;
+}
+
+.benefits-list-wrap {
+	width: 370px;
+	margin-right: 130px;
 }
 
 .benefits-list {
 	display: flex;
 	flex-wrap: wrap;
+	column-gap: 30px;
 }
 
 .benefits-item {
@@ -347,19 +385,20 @@ body {
 	height: 133px;
 	padding: 20px 24px;
 
-	outline: 1px solid red;
+	background-color: var(--secondary-background-color);
 }
 
-/* .benefits-item:nth-child(2) {
-	margin-top: 35px;
-} */
+.benefits-item:nth-child(2n + 1) {
+	margin-bottom: 30px;
+}
 
-/* .benefits-item:nth-child(3) {
-	margin-bottom: 35px;
-} */
+.benefits-item:nth-child(2n) {
+	margin-top: 30px;
+}
 
-.benefits-item span {
-	display: block;
+.benefits-number {
+	display: flex;
+	justify-content: center;
 	margin-bottom: 6px;
 
 	font-weight: 700;
@@ -371,6 +410,12 @@ body {
 	color: var(--secondary-text-color);
 }
 
+/* не готовий */
+
+.benefits-icon {
+	fill: var(--accent-color);
+}
+
 .benefits-item-text {
 	font-weight: 600;
 	font-size: 11px;
@@ -380,13 +425,17 @@ body {
 	color: var(--secondary-text-color);
 }
 
-/* .benefits-wrap {
-	padding-right: 100px;
-} */
+.benefits-wrap {
+	max-width: 470px;
+}
 
 .benefits-pre-title,
 .benefits-title {
 	color: var(--secondary-text-color);
+}
+
+.benefits-pre-title::before {
+	background-color: var(--secondary-text-color);
 }
 
 .benefits-title {
@@ -401,6 +450,10 @@ body {
 .barbers-pre-title,
 .barbers-title {
 	color: var(--secondary-text-color);
+}
+
+.barbers-pre-title::before {
+	background-color: var(--secondary-text-color);
 }
 
 .barbers-title {
@@ -446,9 +499,32 @@ body {
 	color: var(--accent-color);
 }
 
-.media-list {
+.social-links-list {
 	display: flex;
 	justify-content: center;
+}
+
+.social-links-item {
+	width: 44px;
+	height: 44px;
+}
+
+.social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+
+	background-color: var(--primary-background-color);
+
+	fill: var(--secondary-text-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+	fill: var(--accent-color);
 }
 
 /* --------------WORKS-------------- */
@@ -458,16 +534,16 @@ body {
 	color: var(--secondary-text-color);
 }
 
+.works-pre-title::before {
+	background-color: var(--secondary-text-color);
+}
+
 .works-list {
 	display: flex;
 	gap: 30px;
 }
 
 /* -------BOOKING AND CONTACTS------ */
-/* .booking-contacts {
-	display: flex;
-} */
-
 /* -------------BOOKING------------- */
 .booking-section {
 	/* width: calc((100%-30px) / 2); */
@@ -495,7 +571,9 @@ body {
 }
 
 .contacts-map-link {
-	display: inline-block;
+	/* недороблене позіціонування іконки */
+
+	display: flex;
 	margin-bottom: 20px;
 
 	font-weight: 700;
@@ -503,18 +581,25 @@ body {
 	color: var(--additional-text-color);
 }
 
+.adress-icon {
+	margin-right: 20px;
+	fill: none;
+	stroke: currentColor;
+}
+
 .contacts-item + .contacts-item {
 	margin-top: 20px;
 }
 
-.contacts-tel {
+.contacts-tel,
+.contacts-email {
+	display: flex;
+	align-items: center;
 	color: var(--additional-text-color);
 }
 
 .contacts-email {
 	text-decoration-line: underline;
-
-	color: var(--additional-text-color);
 }
 
 .contacts-map-link:hover,
@@ -527,6 +612,8 @@ body {
 }
 
 .contacts-subtitle {
+	display: flex;
+	align-items: center;
 	margin-bottom: 20px;
 
 	font-weight: 600;
@@ -535,6 +622,14 @@ body {
 	text-transform: uppercase;
 
 	color: var(--light-text-color);
+}
+
+.contacts-subtitle::before {
+	content: "";
+	width: 60px;
+	height: 1px;
+	margin-right: 20px;
+	background-color: var(--light-text-color);
 }
 
 .contacts-scedule {
@@ -567,7 +662,16 @@ body {
 
 .footer-list {
 	display: flex;
+	align-items: center;
 	gap: 40px;
+}
+
+.footer-list::before {
+	content: "";
+	display: flex;
+	width: 60px;
+	height: 1px;
+	background-color: var(--secondary-text-color);
 }
 
 .footer-link {
