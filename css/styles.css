@@ -9,6 +9,8 @@
 	--secondary-background-color: #f7f7f7;
 	--additional-background-color: #191c26;
 	--prices-background-color: #111319;
+
+	--timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -54,8 +56,6 @@ body {
 	padding-right: 15px;
 	padding-left: 15px;
 	margin: 0 auto;
-
-	outline: 2px solid red;
 }
 
 .btn {
@@ -123,9 +123,11 @@ body {
 
 /* --------------HEADER------------- */
 .header {
+	position: absolute;
+	width: 100%;
+
 	padding-top: 32px;
 	padding-bottom: 32px;
-	background-color: #616161;
 }
 
 .header-container {
@@ -139,7 +141,6 @@ body {
 }
 
 .header-logo {
-	display: flex;
 	margin-right: 131px;
 	color: var(--secondary-text-color);
 }
@@ -161,6 +162,10 @@ body {
 	letter-spacing: 0.1em;
 
 	color: var(--light-text-color);
+
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
 
 .header-link:hover,
@@ -178,6 +183,10 @@ body {
 	margin-left: 43px;
 
 	color: var(--light-text-color);
+
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
 
 .header-btn:hover,
@@ -194,26 +203,43 @@ body {
 	display: flex;
 }
 
-.hero-list {
+.hero-soc {
+	display: flex;
+	align-items: flex-end;
 	width: 100px;
+	padding-bottom: 40px;
+	padding-left: 27px;
+}
+
+.hero-list {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+
+	transform: rotate(-90deg) translateY(100%);
+	transform-origin: bottom left;
 }
 
 .hero-list::before {
 	content: "";
-	display: inline-block;
+
 	width: 60px;
 	height: 1px;
-	margin-right: 20px;
 	background-color: var(--secondary-text-color);
 }
 
 .hero-link {
-	display: flex;
+	display: block;
+
 	font-weight: 600;
 	font-size: 11px;
 	line-height: 1.36;
 
 	color: var(--secondary-text-color);
+
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
 
 .hero-link:hover,
@@ -223,7 +249,7 @@ body {
 
 .hero-text {
 	flex-grow: 1;
-	padding-top: 184px;
+	padding-top: 272px;
 	padding-right: 100px;
 	padding-bottom: 208px;
 	padding-left: 100px;
@@ -287,6 +313,10 @@ body {
 
 .about-btn {
 	color: var(--secondary-text-color);
+
+	transition-property: color, background-color;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
 
 .about-btn:hover,
@@ -297,9 +327,6 @@ body {
 }
 
 /* --------------PRICES------------- */
-
-/* не працює background */
-
 .prices-section {
 	max-width: 1600px;
 	margin: 0 auto;
@@ -376,6 +403,10 @@ body {
 	margin-top: 44px;
 
 	color: var(--light-text-color);
+
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
 
 .prices-btn:hover,
@@ -521,6 +552,11 @@ body {
 
 	color: var(--accent-color);
 }
+.media-link {
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
+}
 
 .media-link:hover,
 .media-link:focus {
@@ -548,6 +584,10 @@ body {
 	background-color: var(--primary-background-color);
 
 	fill: var(--secondary-text-color);
+
+	transition-property: fill;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
 
 .social-link:hover,
@@ -606,6 +646,14 @@ body {
 
 .address {
 	margin-bottom: 70px;
+}
+
+.contacts-map-link,
+.contacts-tel,
+.contacts-email {
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
 }
 
 .contacts-map-link {
