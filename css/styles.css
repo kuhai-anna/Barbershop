@@ -10,6 +10,9 @@
 	--additional-background-color: #191c26;
 	--prices-background-color: #111319;
 
+	--modal-background-color: rgba(0, 0, 0, 0.2);
+	--modal-btn-border-color: rgba(0, 0, 0, 0.1);
+
 	--timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -779,4 +782,73 @@ body {
 .footer-link:hover,
 .footer-link:focus {
 	color: var(--accent-color);
+}
+
+/* ------------MODAL WINDOW------------ */
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: var(--modal-background-color);
+
+	opacity: 1;
+	visibility: visible;
+	transition-property: opacity, visibility;
+	transition-duration: 250ms, 250ms;
+	transition-timing-function: var(--timing-function), var(--timing-function);
+}
+
+.backdrop.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 8px;
+	transform: translate(-50%, -50%) scale(1);
+
+	width: 528px;
+	height: 581px;
+
+	background-color: var(--primary-background-color);
+	border-radius: 5px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+		0px 2px 1px rgba(0, 0, 0, 0.2);
+
+	transition-property: transform;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
+}
+
+.backdrop.is-hidden .modal {
+	transform: translate(-50%, -50%) scale(0.9);
+}
+
+.button-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 30px;
+	height: 30px;
+
+	background-color: transparent;
+	border: 1px solid var(--modal-btn-border-color);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.button-close:hover .modal-close {
+	fill: var(--accent-color);
 }
