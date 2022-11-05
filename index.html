@@ -527,13 +527,20 @@
 			</div>
 		</footer>
 
-		<div class="backdrop is-hidden" data-modal>
+		<div class="backdrop" data-modal>
 			<div class="modal">
 				<button class="button-close" type="button" data-modal-close>
 					<svg class="modal-close" aria-label="Закрити вікно" width="18" height="18">
 						<use class="close-icon" href="./img/sprite.svg#close"></use>
 					</svg>
 				</button>
+				<p class="modal-title">Leave your contacts and we'll call you back</p>
+				<form class="modal-form">
+					<input class="modal-imput" name="user-name" type="text" placeholder="Your name" />
+					<input class="modal-imput" name="user-tel" type="text" placeholder="Your tel" />
+					<input class="modal-imput" name="user-email" type="text" placeholder="Your e-mail" />
+					<button class="btn modal-submit" type="submit">Send</button>
+				</form>
 			</div>
 		</div>
 

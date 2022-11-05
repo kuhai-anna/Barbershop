@@ -12,6 +12,7 @@
 
 	--modal-background-color: rgba(0, 0, 0, 0.2);
 	--modal-btn-border-color: rgba(0, 0, 0, 0.1);
+	--modal-input-border-color: rgba(33, 33, 33, 0.2);
 
 	--timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -812,7 +813,7 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	padding: 8px;
+	padding: 40px;
 	transform: translate(-50%, -50%) scale(1);
 
 	width: 528px;
@@ -851,4 +852,38 @@ body {
 
 .button-close:hover .modal-close {
 	fill: var(--accent-color);
+}
+
+.modal-title {
+	margin-bottom: 12px;
+
+	font-weight: 700;
+	font-size: 19px;
+	line-height: 1.15;
+	text-align: center;
+	letter-spacing: 0.03em;
+}
+
+.modal-imput {
+	width: 100%;
+	height: 40px;
+	padding-left: 10px;
+	margin-bottom: 10px;
+
+	color: var(--secondary-text-color);
+
+	border: 1px solid var(--modal-input-border-color);
+	border-radius: 4px;
+}
+
+.modal-imput::placeholder {
+	font-size: 16px;
+}
+
+.modal-submit {
+	display: block;
+	padding: 12px 40px;
+	margin: 0 auto;
+
+	color: var(--secondary-text-color);
 }
