@@ -579,6 +579,7 @@ body {
 .social-links-list {
 	display: flex;
 	justify-content: center;
+	gap: 10px;
 }
 
 .social-links-item {
@@ -818,7 +819,7 @@ body {
 	transform: translate(-50%, -50%) scale(1);
 
 	width: 528px;
-	height: 581px;
+	height: 566px;
 
 	background-color: var(--primary-background-color);
 	border-radius: 5px;
@@ -915,6 +916,10 @@ body {
 	padding-left: 42px;
 }
 
+.modal-textarea-field {
+	margin-bottom: 15px;
+}
+
 .modal-textarea {
 	height: 120px;
 	padding: 12px 16px;
@@ -958,6 +963,72 @@ body {
 
 .modal-input:focus + .modal-input-icon {
 	fill: var(--accent-color);
+}
+
+.modal-checkbox-field {
+	margin-bottom: 20px;
+}
+
+.label-check {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-left: 10px;
+}
+
+.label-check::before {
+	position: absolute;
+
+	content: "";
+	width: 30px;
+	height: 15px;
+
+	border: 1px solid var(--primary-text-color);
+	border-radius: 50px;
+
+	transition-property: border-color;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
+}
+
+.label-check::after {
+	position: absolute;
+	top: 4px;
+	left: 2px;
+
+	content: "";
+	width: 11px;
+	height: 11px;
+
+	background-color: var(--primary-text-color);
+	border-radius: 50%;
+
+	transition-property: border-color, transform;
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
+}
+
+.input-check:checked + .label-check::before {
+	border-color: var(--accent-color);
+}
+
+.input-check:checked + .label-check::after {
+	transform: translateX(15px);
+	background-color: var(--accent-color);
+}
+
+.label-check-text,
+.label-check-link {
+	font-size: 12px;
+}
+
+.label-check-text {
+	margin-right: 5px;
+	margin-left: 38px;
+}
+
+.label-check-link {
+	color: var(--accent-color);
 }
 
 .modal-submit {
