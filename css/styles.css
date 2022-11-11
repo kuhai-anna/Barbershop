@@ -226,8 +226,6 @@ body {
 	align-items: center;
 	gap: 40px;
 
-	/* трансформація розширює поле блоку, як пофіксити? */
-
 	transform: rotate(-90deg) translateY(100%);
 	transform-origin: bottom left;
 }
